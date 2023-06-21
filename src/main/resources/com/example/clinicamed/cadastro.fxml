@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clinicamed.CadUserController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #01A0FE;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="421.0" fitWidth="300.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:\Users\suyan.SUYANE\IdeaProjects\ClinicaMed\imagens\Sistema consulta medica- USUARIO.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="357.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="107.0" prefWidth="300.0" style="-fx-background-color: #AECDF4;">
+               <children>
+                  <Text fill="#043f8d" layoutX="70.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRO" textAlignment="JUSTIFY" wrappingWidth="147.439453125">
+                     <font>
+                        <Font name="Cambria Bold" size="27.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="81.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entre para continuar" textAlignment="CENTER">
+                     <font>
+                        <Font name="Cambria" size="12.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+            <Text layoutX="53.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insira seu nome">
+               <font>
+                  <Font name="Sitka Text" size="12.0" />
+               </font>
+            </Text>
+            <TextField layoutX="51.0" layoutY="167.0" prefHeight="25.0" prefWidth="183.0" promptText="Usuário">
+               <effect>
+                  <ColorAdjust brightness="0.47" />
+               </effect>
+            </TextField>
+            <Text layoutX="53.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crie uma senha">
+               <font>
+                  <Font name="Sitka Text" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="53.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecione seu plano">
+               <font>
+                  <Font name="Sitka Text" size="12.0" />
+               </font>
+            </Text>
+            <PasswordField layoutX="52.0" layoutY="227.0" prefHeight="25.0" prefWidth="183.0" promptText="********">
+               <effect>
+                  <ColorAdjust brightness="0.47" />
+               </effect>
+            </PasswordField>
+            <ComboBox layoutX="51.0" layoutY="286.0" prefHeight="25.0" prefWidth="183.0" promptText="Selecione">
+               <effect>
+                  <ColorAdjust brightness="0.4" />
+               </effect>
+            </ComboBox>
+            <Button fx:id="btnCadastra" layoutX="80.0" layoutY="340.0" mnemonicParsing="false" onAction="#onClickCadastrar" prefHeight="21.0" prefWidth="121.0" style="-fx-background-color: #AECDF4; -fx-background-radius: 15;" text="Cadastrar" textAlignment="CENTER">
+               <font>
+                  <Font name="Segoe UI Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
