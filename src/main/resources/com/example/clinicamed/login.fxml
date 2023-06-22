@@ -64,7 +64,7 @@
                         <ColorAdjust brightness="0.47" />
                      </effect>
                   </PasswordField>
-                  <Button layoutX="73.0" layoutY="163.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="165.0" style="-fx-background-color: #AECDF4; -fx-background-radius: 15;" text="Entrar" textAlignment="CENTER">
+                  <Button layoutX="73.0" layoutY="163.0" mnemonicParsing="false" onAction="#onClickLogin" prefHeight="30.0" prefWidth="165.0" style="-fx-background-color: #AECDF4; -fx-background-radius: 15;" text="Entrar" textAlignment="CENTER">
                      <font>
                         <Font name="Segoe UI Bold" size="12.0" />
                      </font>

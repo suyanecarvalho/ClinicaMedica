@@ -23,9 +23,26 @@ public class LoginController implements Initializable {
         this.stage = stage;
     }
     @FXML
+    void onClickLogin(ActionEvent event) {
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/clinicamed/telaInicial.fxml"));
+            Parent logFxml= fxmlLoader.load();
+
+            InicialController cadController= fxmlLoader.getController();
+            Scene loginScene = new Scene(logFxml);
+            this.getStage().setScene(loginScene);
+            this.getStage().setTitle("cadastro paciente");
+            this.stage.show();
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
     void onClickCadUser(ActionEvent event) {
-
-
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/clinicamed/cadastro.fxml"));
@@ -58,6 +75,7 @@ public boolean onCloseQuery(){
         //fechar();
     }
     public static void fechar(){
+
         Main.getStage().close();
     }
 }
