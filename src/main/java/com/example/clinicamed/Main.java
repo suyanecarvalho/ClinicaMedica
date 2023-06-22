@@ -14,7 +14,7 @@ public class Main extends javafx.application.Application {
     }
 
     @Override
-    public void start(Stage stage)   {
+    public void start(Stage primaryStage)   {
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/clinicamed/login.fxml"));
@@ -22,32 +22,15 @@ public class Main extends javafx.application.Application {
             LoginController cadController= fxmlLoader.getController();
 
             Scene loginScene = new Scene(logFxml);
-            Stage janelaLogin= new Stage();
-            janelaLogin.initModality(Modality.APPLICATION_MODAL);
-
-            //n podera redimensionar
-            janelaLogin.resizableProperty().setValue(Boolean.FALSE);
-            janelaLogin.close();;
-            janelaLogin.setScene(loginScene);
-
-            janelaLogin.setTitle("Tela de Login ");
-            janelaLogin.setOnCloseRequest(e->{
-                if (cadController.onCloseQuery()){
-                    System.exit(0);
-                }else {
-                    e.consume();
-                }
-            });
-            janelaLogin.show();
-
-
+           primaryStage.resizableProperty().setValue(Boolean.FALSE);   //redimensionamento
+            primaryStage.setScene(loginScene);
+           primaryStage.setTitle("Tela de Login ");
+           primaryStage.show();
 
         }catch (Exception e){
             e.printStackTrace();
         }
-
     }
-
     public static void main(String[] args) {
         launch();
     }

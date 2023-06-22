@@ -20,9 +20,19 @@ import java.util.ResourceBundle;
 public class InicialController implements Initializable {
     @FXML
     private Hyperlink planoSaude;
+    @FXML
+    private Hyperlink agendarConsulta;
     public void clickPlanoSaude(ActionEvent event){
         System.out.println("clicouu no plano de saude");
         planoSaude.hoverProperty();
+
+    }
+
+    @FXML
+    void clickAgendar(ActionEvent event) {
+
+        System.out.println("clicouu no agendamento");
+        agendarConsulta.hoverProperty();
 
     }
 

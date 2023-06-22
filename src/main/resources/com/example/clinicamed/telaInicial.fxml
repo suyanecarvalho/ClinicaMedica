@@ -48,7 +48,7 @@
                         <Font name="Segoe UI Bold" size="19.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink layoutX="24.0" layoutY="123.0" style="-fx-underline: false; -fx-cursor: hand;" text="Agendar Consulta" textFill="#004aad">
+                  <Hyperlink fx:id="agendarConsulta" layoutX="24.0" layoutY="123.0" onAction="#clickAgendar" style="-fx-underline: false; -fx-cursor: hand;" text="Agendar Consulta" textFill="#004aad">
                      <font>
                         <Font name="Segoe UI Bold" size="18.0" />
                      </font>

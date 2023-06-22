@@ -24,6 +24,7 @@ public class LoginController implements Initializable {
     }
     @FXML
     void onClickLogin(ActionEvent event) {
+
         try {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/clinicamed/telaInicial.fxml"));
@@ -55,20 +56,20 @@ public class LoginController implements Initializable {
             this.stage.show();
 
 
+
         }catch (Exception e){
             e.printStackTrace();
         }
-    }
-//metodo para fechar tela
-public boolean onCloseQuery(){
 
-        return true;}
+    }
 //metodo para centralizar telas
     public void configuraStage(){
+
         this.setStage(new Stage());
 
         this.getStage().initModality(Modality.APPLICATION_MODAL);
-        this.getStage().resizableProperty().setValue(Boolean.FALSE);    }
+        this.getStage().resizableProperty().setValue(Boolean.FALSE);
+        }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.configuraStage();
@@ -76,6 +77,6 @@ public boolean onCloseQuery(){
     }
     public static void fechar(){
 
-        Main.getStage().close();
+        //Main.getStage().close();
     }
 }
