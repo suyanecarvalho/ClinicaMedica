@@ -1,5 +1,4 @@
 package com.example.clinicamed;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +10,6 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Hyperlink;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
@@ -22,6 +20,14 @@ public class InicialController implements Initializable {
     private Hyperlink planoSaude;
     @FXML
     private Hyperlink agendarConsulta;
+    private Stage stage;
+    public Stage getStage() {
+        return stage;
+    }
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
     public void clickPlanoSaude(ActionEvent event){
         System.out.println("clicouu no plano de saude");
         planoSaude.hoverProperty();
@@ -33,6 +39,23 @@ public class InicialController implements Initializable {
 
         System.out.println("clicouu no agendamento");
         agendarConsulta.hoverProperty();
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/clinicamed/agendamento.fxml"));
+            Parent logFxml= fxmlLoader.load();
+
+            //CadUserController cadController= fxmlLoader.getController();
+            Scene loginScene = new Scene(logFxml);
+            this.getStage().setScene(loginScene);
+            //this.getStage().setTitle("Agendamento");
+            this.stage.show();
+
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
 
     }
 
@@ -55,8 +78,16 @@ public class InicialController implements Initializable {
     }
 
 
+    public void configuraStage(){
+
+        this.setStage(new Stage());
+
+        this.getStage().initModality(Modality.APPLICATION_MODAL);
+        this.getStage().resizableProperty().setValue(Boolean.FALSE);
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        this.configuraStage();
     }
+
 }

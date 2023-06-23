@@ -76,7 +76,6 @@ public class LoginController implements Initializable {
         //fechar();
     }
     public static void fechar(){
-
         //Main.getStage().close();
     }
 }
