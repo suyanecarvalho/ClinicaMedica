@@ -16,10 +16,10 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class InicialController implements Initializable {
+
     @FXML
-    private Hyperlink planoSaude;
-    @FXML
-    private Hyperlink agendarConsulta;
+    private Hyperlink agendarConsulta,planoSaude,relatorioConsulta;
+
     private Stage stage;
     public Stage getStage() {
         return stage;
@@ -33,11 +33,29 @@ public class InicialController implements Initializable {
         planoSaude.hoverProperty();
 
     }
+    @FXML
+    void clickRelatorio(ActionEvent event) {
 
+        agendarConsulta.hoverProperty();
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/clinicamed/relatorioConsulta.fxml"));
+            Parent logFxml= fxmlLoader.load();
+            Scene loginScene = new Scene(logFxml);
+            this.getStage().setScene(loginScene);
+            this.stage.show();
+
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+    }
     @FXML
     void clickAgendar(ActionEvent event) {
 
-        System.out.println("clicouu no agendamento");
         agendarConsulta.hoverProperty();
         try {
 

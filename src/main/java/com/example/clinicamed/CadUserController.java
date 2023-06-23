@@ -1,5 +1,8 @@
 package com.example.clinicamed;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.ObservableListBase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,6 +29,8 @@ public class CadUserController implements Initializable {
     public void setStage(Stage stage) {
         this.stage = stage;
     }
+    @FXML
+    private ComboBox comboPlano;
 
  @FXML
  void onClickCadastrar(ActionEvent event) throws IOException {
@@ -57,6 +62,11 @@ public class CadUserController implements Initializable {
 
     }
 }
+    @FXML
+    void listarPlano(ActionEvent event) {
+        String list= comboPlano.getSelectionModel().getSelectedItem().toString();
+
+    }
     public void configuraStage(){
         this.setStage(new Stage());
 
@@ -65,6 +75,8 @@ public class CadUserController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.configuraStage();
-        // fechar();
+        ObservableList<String>lista= FXCollections.observableArrayList("Plano A","Plano B");
+        comboPlano.setItems(lista);
+
     }
 }

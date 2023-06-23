@@ -66,7 +66,7 @@
                   <ColorAdjust brightness="0.47" />
                </effect>
             </PasswordField>
-            <ComboBox layoutX="51.0" layoutY="286.0" prefHeight="25.0" prefWidth="183.0" promptText="Selecione">
+            <ComboBox fx:id="comboPlano" layoutX="51.0" layoutY="286.0" onAction="#listarPlano" prefHeight="25.0" prefWidth="183.0" promptText="Selecione">
                <effect>
                   <ColorAdjust brightness="0.4" />
                </effect>
